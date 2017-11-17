@@ -21,9 +21,11 @@
 						<div class="content">
 							<h1>Bitcoin Wizard - WSJ</h1>
 							<p class="major">This is the first Initial Troll Offering.</p>
+							<h3 id="balance"></h3>
+							<p/>
 							<p>Read the whitepaper <a href="https://twitter.com/cryptograffiti/status/930933869066338304" target="blank">here.</a></p>
 							<ul class="actions vertical">
-								<li><a href="#participate" class="button big wide smooth-scroll-middle">Get Started</a></li>
+								<li><a href="#participate" class="button big wide smooth-scroll-middle">Contribute</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -63,7 +65,12 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="participate">
 						<div class="content">
 							<h2>Participate</h2>
-							<p>Your contribution will go directly towards buying a full page ad in the Wall Street Journal. This generally costs $350,000 USD. We want your help to get this wizard into this old newspaper. If you participate, you will not get your money back. Unless we fail. Then you will get your money back. If we succeed, we'll get the Bitcoin Wizard into the Wall Street Journal.</p>
+							<p>
+							  Your contribution will go directly towards buying a full page ad in the Wall Street Journal. This generally costs $350,000 USD. We want your help to get this wizard into this old newspaper. If you participate, you will not get your money back. Unless we fail. Then you will get your money back. If we succeed, we'll get the Bitcoin Wizard into the Wall Street Journal.
+							</p>
+							<p>
+							  Pay to <a href="https://insight.bitpay.com/address/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP" >3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP</a> to contribute  
+							</p>
 						</div>
 						<div class="image">
 						  <a href="https://insight.bitpay.com/address/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP" target="blank">
@@ -96,6 +103,20 @@
 
 			  gtag('config', 'UA-109796524-1');
 			</script>
-
+			<script>
+			  var price = 7000.00
+			  var balanceElement = document.getElementById("balance")
+			  balanceElement.textContent = "Loading . . ."
+                            $.get('https://blockchain.info/ticker')
+			    .then((res) => {
+			      price = res["USD"]["last"]
+			      return {}
+			    }).then(() => {
+  			      return $.get('https://api.blockcypher.com/v1/btc/main/addrs/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP/balance')
+                            }).then((d) => {
+			      var balance = parseFloat(d.balance / 1e8).toFixed(4)
+			      balanceElement.textContent = balance + '/' + parseFloat((350000 / price)).toFixed(2) + ' BTC Raised'; 
+			    });
+			</script>
 	</body>
 </html>
