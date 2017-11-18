@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	</head>
 	<body>
 
@@ -70,17 +71,36 @@
 							  Your contribution will go directly towards buying a full page ad in the Wall Street Journal. This generally costs $350,000 USD. We want your help to get this wizard into this old newspaper. If you participate, you will not get your money back. Unless we fail. Then you will get your money back. If we succeed, we'll get the Bitcoin Wizard into the Wall Street Journal.
 							</p>
 							<p>
-							  Pay to <a href="https://insight.bitpay.com/address/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP" >3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP</a> to contribute  
+							  Pay to <a href="https://insight.bitpay.com/address/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP" >3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP</a> to contribute
 							</p>
+							<div class="row twitter btn-group">
+								<a href="https://twitter.com/intent/tweet?text=Just%20Contributed%20to%20get%20BTC%20Wizard%20on%20the%20Wall%20Street%20Journal!%20Join%20our%20ITO%20at&url=https%3A%2F%2Fbtcwizard.fund%2F&hashtags=BTCWiz,ITO,CryptoWSJ" target="_blank">
+								<button type="button" class="btn btn-primary">
+										Tweet this
+										<i class="fa fa-twitter"></i>
+								</button>
+								</a>
+								<a href="https://twitter.com/intent/tweet?text=Just%20Contributed%20to%20get%20BTC%20Wizard%20on%20the%20Wall%20Street%20Journal!%20Join%20our%20ITO%20at&url=https%3A%2F%2Fbtcwizard.fund%2F&hashtags=BTCWiz,ITO,CryptoWSJ&in-reply-to=930933869066338304" target="_blank">
+								<button type="button" class="btn btn-primary">
+										Join the conversation
+										<i class="fa fa-twitter"></i>
+								</button>
+								</a>
+
+							</div>
 						</div>
 						<div class="image">
 						  <a href="https://insight.bitpay.com/address/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP" target="blank">
 							<img src="images/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP.png" alt="" />
 						  </a>
 						</div>
+
+
 					</section>
 
+					<!-- EDIT -->
 
+					<!-- Edit -->
 <!-- Five -->
 <section class="wrapper style1 align-center">
   <div class="inner">
@@ -216,7 +236,7 @@
   			      return $.get('https://api.blockcypher.com/v1/btc/main/addrs/3LPbF1wufpLzRU5pBNutivadVXyK9jwtkP/balance')
                             }).then((d) => {
 			      var balance = parseFloat(d.balance / 1e8).toFixed(4)
-			      balanceElement.textContent = balance + '/' + parseFloat((350000 / price)).toFixed(2) + ' BTC Raised'; 
+			      balanceElement.textContent = balance + '/' + parseFloat((350000 / price)).toFixed(2) + ' BTC Raised';
 			    });
 			</script>
 	</body>
